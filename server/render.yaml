@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: wear-store
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    disk:
+      name: apk-storage
+      mountPath: /app/uploads
+      sizeGB: 1
